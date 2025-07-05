@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RI Gym Pro Nutrition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+   <div id="tsparticles" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;"></div>
+  <header>
+  <h1>RI Gym Pro Nutrition</h1>
+  <button id="cart-btn" style="position:absolute;top:2rem;left:2rem;padding:0.5rem 1.2rem;border-radius:20px;background:#d62828;color:#fff;border:none;cursor:pointer;">
+    Cart (<span id="cart-count">0</span>)
+  </button>
+  </header>
+  <section id="categories" class="container">
+    <h2>Categories</h2>
+    <ul class="categories-list">
+      <li class="category-item active" data-category="all">All</li>
+      <li class="category-item" data-category="whey">Whey Protein</li>
+      <li class="category-item" data-category="creatine">Creatine</li>
+      <li class="category-item" data-category="gainer">Mass Gainer</li>
+      <li class="category-item" data-category="bcaa">BCAA</li>
+      <li class="category-item" data-category="preworkout">Pre-workout</li>
+    </ul>
+  </section>
+  <section id="search-section" class="container" style="text-align:center; margin-bottom:2rem;">
+  <input
+    type="text"
+    id="product-search"
+    placeholder="Search for a product..."
+    style="padding:0.7rem 1.2rem; border-radius:20px; border:1px solid #ffffff; width:60%; max-width:400px;"
+  />
+</section>
+  <section id="products" class="container">
+    <h2>مكملاتنا</h2>
+    <div class="products-grid">
+
+      <!-- مثال كامل لعدة منتجات مع زر السلة بشكل جميل -->
+<div class="tilt-card" data-category="whey">
+  <img src="assets/Whey_Gold_Standard_4_5_Kg-removebg-preview.png" alt="Whey Protein 2kg" />
+  <h3>Whey Protein 2kg</h3>
+  <p class="price">9000 DA</p>
+  <button class="order-btn" data-product="Whey Protein 2kg" data-price="9000">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Whey Protein 2kg" data-price="9000">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/creatine_op-removebg-preview.png" alt="Creatine Monohydrate 300g" />
+  <h3>Creatine Monohydrate 300g</h3>
+  <p class="price">4500 DA</p>
+  <button class="order-btn" data-product="Creatine Monohydrate 300g" data-price="4500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatine Monohydrate 300g" data-price="4500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/bn-creatine_11zon-removebg-preview.png" alt="Creatine 150g BN" />
+  <h3>Creatine 150g BN</h3>
+  <p class="price">1500 DA</p>
+  <button class="order-btn" data-product="Creatine 150g BN" data-price="1500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatine 150g BN" data-price="1500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/creapure_next_level-removebg-preview.png" alt="Creapure 500g Next level" />
+  <h3>Creapure 500g Next level</h3>
+  <p class="price">8500 DA</p>
+  <button class="order-btn" data-product="Creapure 500g Next level" data-price="8500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creapure 500g Next level" data-price="8500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="bcaa">
+  <img src="assets/BCAA-Peach-Passion-Fruit-Gold-Nutrition-300x300.webp" alt="BCAA 250g" />
+  <h3>BCAA 2:1:1 250g</h3>
+  <p class="price">3800 DA</p>
+  <button class="order-btn" data-product="BCAA 2:1:1 250g" data-price="3800">Order Now</button>
+  <button class="add-to-cart-btn" data-product="BCAA 2:1:1 250g" data-price="3800">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="preworkout">
+  <img src="assets/pre_op-removebg-preview.png" alt="Pre-workout" />
+  <h3>Pre-workout</h3>
+  <p class="price">6000 DA</p>
+  <button class="order-btn" data-product="Pre-workout" data-price="6000">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Pre-workout" data-price="6000">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="gainer">
+  <img src="assets/titan-xl-gainer-gluten-free-life-pro-3-kg-removebg-preview.png" alt="Mass Gainer Titan 3kg" />
+  <h3>Mass Gainer Titan 3kg</h3>
+  <p class="price">13000 DA</p>
+  <button class="order-btn" data-product="Mass Gainer Titan 3kg" data-price="13000">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Mass Gainer Titan 3kg" data-price="13000">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+
+<div class="tilt-card" data-category="gainer">
+  <img src="assets/Usn_anabolic_all_in_1_best_deal-removebg-preview.png" alt="muscle fuel anabolic 4Kg" />>
+  <h3>muscle fuel anabolic 4Kg</h3>
+  <p class="price">12500 DA</p>
+  <button class="order-btn" data-product="muscle fuel anabolic 4Kg" data-price="12500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="muscle fuel anabolic 4Kg" data-price="12500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="gainer">
+  <img src="assets/iso_gainz-removebg-preview.png" alt="iso gainz evolite 4Kg" />alt="iso gainz evolite 4Kg" />
+  <h3>iso gainz evolite 4Kg</h3>
+  <p class="price">16500 DA</p>
+  <button class="order-btn" data-product="iso gainz evolite 4Kg" data-price="16500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="iso gainz evolite 4Kg" data-price="16500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="gainer">
+  <img src="assets/vitargo-removebg-preview.png" alt="vitargo 1.9Kg" />
+  <h3>vitargo 1.9Kg</h3>
+  <p class="price">10000 DA</p>
+  <button class="order-btn" data-product="vitargo" data-price="10000">Order Now</button>
+  <button class="add-to-cart-btn" data-product="vitargo" data-price="10000">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="gainer">
+     <img src="assets/solid-mass-5kg-removebg-preview.png" alt="solid mass TREC 10Kg" />
+     <h3>solid mass TREC 10Kg</h3>
+      <p class="price">19500 DA</p>
+      <button class="order-btn" data-product="solid mass TREC 10Kg" data-price="19500">Order Now</button>
+      <button class="add-to-cart-btn" data-product="solid mass TREC 10Kg" data-price="19500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+   <div class="tilt-card" data-category="gainer">
+      <img src="assets/Ultra_Gainer_5kg-removebg-preview.png" alt="ultra gainer TREC 4Kg" />
+      <h3>ultra gainer TREC 4Kg</h3>
+      <p class="price">14800 DA</p>
+      <button class="order-btn" data-product="ultra gainer TREC 4Kg" data-price="14800">Order Now</button>
+      <button class="add-to-cart-btn" data-product="ultra gainer TREC 4Kg" data-price="14800">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+   </div>
+   <div class="tilt-card" data-category="gainer">
+      <img src="assets/carbo-removebg-preview.png" alt="carbo fuel TREC 1Kg" /> fuel TREC 1Kg</h3>
+      <h3>carbo fuel TREC 1Kg</h3>
+      <p class="price">2500 DA</p>
+      <button class="order-btn" data-product="carbo fuel TREC 1Kg" data-price="2500">Order Now</button>
+      <button class="add-to-cart-btn" data-product="carbo fuel TREC 1Kg" data-price="2500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+    </div>
+     <div class="tilt-card" data-category="gainer">
+      <img src="assets/solid-mass-5kg-removebg-preview.png" alt="solid mass TREC 5Kg" />
+       <h3>solid mass TREC 5Kg</h3>
+       <p class="price">12800 DA</p>
+       <button class="order-btn" data-product="solid mass TREC 5Kg" data-price="12800">Order Now</button>
+       <button class="add-to-cart-btn" data-product="solid mass TREC 5Kg" data-price="12800">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+     </div>
+     <div class="tilt-card" data-category="gainer">
+        <img src="assets/true-mass-45kg-bsn-removebg-preview.png" alt="true mass 4.5Kg" />
+        <h3>true mass 4.5Kg</h3>
+        <p class="price">19000 DA</p>
+        <button class="order-btn" data-product="true mass 4.5Kg" data-price="19000">Order Now</button>
+        <button class="add-to-cart-btn" data-product="true mass 4.5Kg" data-price="19000">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+      </div>
+      <div class="tilt-card" data-category="gainer">
+        <img src="assets/magnum-removebg-preview.png" alt="magnum TREC 7Kg" />
+        <h3>magnum TREC 7Kg</h3>
+        <p class="price">16800 DA</p>
+        <button class="order-btn" data-product="magnum TREC 7Kg" data-price="16800">Order Now</button>
+        <button class="add-to-cart-btn" data-product="magnum TREC 7Kg" data-price="16800">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+      </div>
+      <div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/creatine-60s-blue-razz-75_1714756779-0_11zon-removebg-preview.png" alt="Creatine Rule One 60 Servings" />
+  <h3>Creatine Rule One 60 Servings</h3>
+  <p class="price">8500 DA</p>
+  <button class="order-btn" data-product="Creatine Rule One 60 Servings" data-price="8500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatine Rule One 60 Servings" data-price="8500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/bn-creatine_11zon-removebg-preview.png" alt="Creatine 1kg BN" />
+  <h3>Creatine 1kg BN</h3>
+  <p class="price">7900 DA</p>
+  <button class="order-btn" data-product="Creatine 1kg BN" data-price="7900">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatine 1kg BN" data-price="7900">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/200mesh_11zon-removebg-preview.png" alt="Creatine Monohydrate 300g Life Pro" />
+  <h3>Creatine Monohydrate 300g Life Pro</h3>
+  <p class="price">7500 DA</p>
+  <button class="order-btn" data-product="Creatine Monohydrate 300g Life Pro" data-price="7500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatine Monohydrate 300g Life Pro" data-price="7500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/Universal_Creatin_500g-removebg-preview.png" alt="Creatin Universal 500g" />
+  <h3>Creatin Universal 500g</h3>
+  <p class="price">8800 DA</p>
+  <button class="order-btn" data-product="Creatin Universal 500g" data-price="8800">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creatin Universal 500g" data-price="8800">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="creatine">
+  <img src="assets/creatine/creapure_next_level-removebg-preview.png" alt="Creapure 300g Next level" />
+  <h3>Creapure 300g Next level</h3>
+  <p class="price">5500 DA</p>
+  <button class="order-btn" data-product="Creapure 300g Next level" data-price="5500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Creapure 300g Next level" data-price="5500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="whey">
+  <img src="assets/whey/nuclear-ISO-removebg-preview.png" alt="Isotope Whey Protein Isolate 2 kg + Shaker" />
+  <h3>Isotope Whey Protein Isolate 2 kg + Shaker</h3>
+  <p class="price">17500 DA</p>
+  <button class="order-btn" data-product="Isotope Whey Protein Isolate 2 kg + Shaker" data-price="17500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Isotope Whey Protein Isolate 2 kg + Shaker" data-price="17500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="whey">
+  <img src="assets/whey/rc-whey-removebg-preview.png" alt="Whey Rc 2kg Xs" />
+  <h3>Whey Rc 2kg Xs</h3>
+  <p class="price">16500 DA</p>
+  <button class="order-btn" data-product="Whey Rc 2kg Xs" data-price="16500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="Whey Rc 2kg Xs" data-price="16500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+<div class="tilt-card" data-category="whey">
+  <img src="assets/whey/dy_nutrition_shadowhey_100_whey_protein_concentrate-removebg-preview.png" alt="ShadoWhey Dy 2kg" />
+  <h3>ShadoWhey Dy 2kg</h3>
+  <p class="price">16500 DA</p>
+  <button class="order-btn" data-product="ShadoWhey Dy 2kg" data-price="16500">Order Now</button>
+  <button class="add-to-cart-btn" data-product="ShadoWhey Dy 2kg" data-price="16500">
+    <span style="font-size:1.2em;">🛒</span> Add to Cart
+  </button>
+</div>
+    
+    </div>
+  </section>
+
+  <section id="delivery" class="container">
+  </section>
+
+  <!-- Order Modal -->
+  <div id="order-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h3 id="modal-product-name"></h3>
+      <form id="order-form">
+        <input type="hidden" id="product" name="product">
+        <label>الكمية
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </label>
+        <label>الولاية
+          <select id="wilaya" name="wilaya" required>
+            <option value="">اختر ولايتك</option>
+            <!-- خيارات الولايات تملأ تلقائياً -->
+          </select>
+        </form>label>
+        <p>سعر التوصيل: <span id="delivery-cost">0</span> DA</p>
+        <p>المجموع الكلي: <span id="total-cost">0</span> DA</p>
+        <label>الاسم الكامل
+          <input type="text" name="fullName" required>
+        </label>
+        <label>الهاتف
+          <input type="tel" name="phone" required>
+        </label>
+        <label>العنوان
+          <textarea name="address" rows="3" required></textarea>
+        </label>
+        <button type="submit">تأكيد الطلب</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 RI Gym Pro Nutrition. جميع الحقوق محفوظة.</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+<div id="cart-modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-content">
+    <span id="close-cart-modal" class="close">&times;</span>
+    <h3>Your Cart</h3>
+    <ul id="cart-items" style="list-style:none;padding:0;"></ul>
+    <p>Total: <span id="cart-total">0</span> DA</p>
+    <button id="checkout-btn" style="margin-top:1rem;">Checkout</button>
+  </div>
+</div>
+</body>
+</html>
